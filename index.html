@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Labs.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">✳ YOUR CLUB NAME</a>
+
+        <div class="nav-links">
+            <a href="index.html"><span>⌂</span> Home</a>
+            <a href="projects.html"><span>✧</span> Projects</a>
+            <a href="#members"><span>♧</span> Members</a>
+            <a href="#about"><span>◎</span> About</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Log In ↗</a>
+            <a href="sign_up.html" class="signup-btn">Join Us ✦</a>
+            <a href="pfp.html" class="profile-button">My Profile</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <p class="eyebrow">A COMMUNITY OF CREATORS</p>
+
+            <h1>
+                Ideas become<br>
+                <span>reality.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover projects, explore new ideas and see what
+                our creative community has been building.
+            </p>
+
+            <a href="projects.html" class="explore-btn">
+                ✧ Explore Projects
+            </a>
+        </section>
+
+        <!-- FEATURED PROJECTS ON HOMEPAGE -->
+        <section class="projects-section" id="projects">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">MADE BY OUR MEMBERS</p>
+                    <h2>Featured projects</h2>
+                </div>
+
+                <a href="projects.html" class="view-all-btn">
+                    ↗ View All
+                </a>
+            </div>
+
+            <!-- PROJECTS LOAD HERE -->
+            <div class="project-gallery" id="featuredProjects">
+                <p>Loading featured projects...</p>
+            </div>
+
+        </section>
+
+        <!-- MEMBERS -->
+        <section class="members" id="members">
+            <p class="eyebrow">THE PEOPLE BEHIND THE IDEAS</p>
+            <h2>Meet the creators.</h2>
+            <p>
+                A community of curious minds, creative thinkers
+                and future innovators.
+            </p>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <p class="eyebrow">OUR COMMUNITY</p>
+            <h2>Built to create.</h2>
+            <p>
+                A place to learn, experiment, collaborate
+                and turn ideas into something real.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>✳ InnovateLabs · Creating beyond limits.</p>
+    </footer>
+
+    <!-- WELCOME MESSAGE -->
+    <div id="welcomeToast" class="welcome-toast">
+        <p class="welcome-label">
+            SYSTEM ONLINE // MEMBER ACCESS GRANTED
+        </p>
+
+        <h2 id="welcomeText">WELCOME BACK ✦</h2>
+
+        <p>Your creative corner is waiting.</p>
+    </div>
+
+    <!-- WELCOME MESSAGE SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const nickname = sessionStorage.getItem("welcomeNickname");
+            const toast = document.getElementById("welcomeToast");
+            const welcomeText = document.getElementById("welcomeText");
+
+            if (nickname && toast && welcomeText) {
+                welcomeText.textContent = `WELCOME BACK, ${nickname} ✦`;
+
+                toast.classList.add("show");
+
+                sessionStorage.removeItem("welcomeNickname");
+
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 5000);
+            }
+        });
+    </script>
+
+    <!-- HOMEPAGE PROJECTS -->
+    <script type="module" src="js/featured.js"></script>
+
+</body>
+</html>

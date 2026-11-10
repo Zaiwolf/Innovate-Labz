@@ -1,0 +1,231 @@
+
+/* SIGN UP PAGE */
+
+.signup-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    background: #101522;
+    color: #F3F4F8;
+    font-family: inherit;
+}
+
+/* BACK HOME */
+
+.back-home {
+    position: absolute;
+    top: 28px;
+    left: 35px;
+    color: #B8A7E8;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.back-home:hover {
+    color: #75D6C4;
+}
+
+/* FLOATING BLOBS */
+
+.signup-decoration {
+    position: absolute;
+    filter: blur(2px);
+    opacity: 0.7;
+    pointer-events: none;
+    animation: floatBlob 8s ease-in-out infinite alternate;
+}
+
+.blob-one {
+    width: 230px;
+    height: 230px;
+    background: #8065C7;
+    top: 8%;
+    left: 10%;
+    border-radius: 60% 40% 35% 65%;
+}
+
+.blob-two {
+    width: 190px;
+    height: 190px;
+    background: #3DAB9D;
+    bottom: 8%;
+    right: 12%;
+    border-radius: 40% 60% 65% 35%;
+    animation-delay: 2s;
+}
+
+.blob-three {
+    width: 100px;
+    height: 100px;
+    background: #D58DAB;
+    top: 20%;
+    right: 18%;
+    border-radius: 50% 40% 60% 45%;
+    animation-delay: 1s;
+}
+
+@keyframes floatBlob {
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-25px) rotate(25deg);
+    }
+}
+
+/* SIGNUP CARD */
+
+.signup-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 460px;
+    padding: 42px;
+    background: rgba(32, 42, 59, 0.82);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(184, 167, 232, 0.25);
+    border-radius: 35px 22px 40px 25px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.35);
+}
+
+.signup-symbol {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: #75D6C4;
+    color: #101522;
+    font-size: 30px;
+    border-radius: 45% 55% 60% 40%;
+    margin-bottom: 22px;
+}
+
+.signup-tag {
+    color: #75D6C4;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.signup-card h1 {
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.signup-card h1 span {
+    color: #B8A7E8;
+}
+
+.signup-description {
+    color: #B8BBD0;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* FORM */
+
+.signup-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.signup-card label {
+    font-size: 13px;
+    color: #D8D4EA;
+    margin-top: 8px;
+}
+
+.signup-card input {
+    padding: 15px;
+    border-radius: 13px;
+    border: 1px solid rgba(184, 167, 232, 0.2);
+    background: rgba(16, 21, 34, 0.8);
+    color: white;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.signup-card input:focus {
+    border-color: #75D6C4;
+    box-shadow: 0 0 15px rgba(117, 214, 196, 0.15);
+}
+
+.signup-card input::placeholder {
+    color: #777D94;
+}
+
+/* JOIN BUTTON */
+
+.signup-submit {
+    margin-top: 18px;
+    padding: 16px;
+    border: none;
+    background: #75D6C4;
+    color: #101522;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 60% 40% 45% 55% / 40% 55% 45% 60%;
+    transition: 0.35s ease;
+}
+
+.signup-submit span {
+    margin-left: 8px;
+}
+
+.signup-submit:hover {
+    transform: scale(1.04) rotate(-2deg);
+    border-radius: 40% 60% 55% 45% / 55% 40% 60% 50%;
+    box-shadow: 0 0 25px rgba(117, 214, 196, 0.3);
+}
+
+/* FOOTER */
+
+.signup-footer {
+    text-align: center;
+    color: #AEB2C7;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.signup-footer a {
+    color: #75D6C4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+#signupMessage {
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .signup-card {
+        padding: 28px 22px;
+    }
+
+    .signup-card h1 {
+        font-size: 31px;
+    }
+
+    .blob-one {
+        width: 130px;
+        height: 130px;
+    }
+
+    .blob-two {
+        width: 120px;
+        height: 120px;
+    }
+}

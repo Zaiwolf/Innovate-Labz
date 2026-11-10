@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Projects | Innovate Labs</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body class="projects-page">
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+
+        <a href="index.html" class="nav-logo">
+            ✳ YOUR CLUB NAME
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html"><span>⌂</span> Home</a>
+            <a href="projects.html"><span>✧</span> Projects</a>
+            <a href="index.html#members"><span>♧</span> Members</a>
+            <a href="index.html#about"><span>◎</span> About</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Log In ↗</a>
+            <a href="sign_up.html" class="signup-btn">Join Us ✦</a>
+            <a href="#" class="profile-button">My Profile</a>
+        </div>
+
+    </nav>
+
+    <main class="projects-main">
+
+        <!-- Page heading -->
+        <section class="projects-hero">
+
+            <p class="eyebrow">THE CREATIVE DATABASE // 001</p>
+
+            <h1>
+                The Project
+                <span>Archive.</span>
+            </h1>
+
+            <p>
+                A collection of ideas, experiments and creations
+                made by the members of Innovate Labs.
+            </p>
+
+        </section>
+
+        <!-- All projects -->
+        <section class="all-projects-section">
+
+            <!-- Gallery heading -->
+            <div class="projects-heading">
+
+                <div>
+                    <p class="eyebrow">EXPLORE THE COMMUNITY</p>
+                    <h2>All Projects <span>✦</span></h2>
+                </div>
+
+                <a href="crproj.html" class="create-post-btn">
+                    <span>＋</span> Create a Post
+                </a>
+
+            </div>
+
+            <!-- Search and category filters -->
+            <div class="project-tools">
+
+                <input
+                    type="text"
+                    id="projectSearch"
+                    placeholder="Search projects..."
+                    aria-label="Search projects"
+                >
+
+                <select id="categoryFilter" aria-label="Filter by category">
+                    <option value="all">All Categories</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Robotics">Robotics</option>
+                    <option value="Other">Other</option>
+                </select>
+
+            </div>
+
+            <!-- Project gallery -->
+            <div class="project-gallery" id="projectGallery">
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Projects JavaScript -->
+    <script type="module" src="js/projects.js"></script>
+
+</body>
+</html>

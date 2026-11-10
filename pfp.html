@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Innovate Labs</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pfp.css">
+</head>
+
+<body class="profile-page">
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+
+        <a href="index.html" class="nav-logo">
+            ✳ YOUR CLUB NAME
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html"><span>⌂</span> Home</a>
+            <a href="projects.html"><span>✧</span> Projects</a>
+            <a href="index.html#members"><span>♧</span> Members</a>
+            <a href="index.html#about"><span>◎</span> About</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Log In ↗</a>
+            <a href="profile.html" class="profile-button">My Profile</a>
+        </div>
+
+    </nav>
+
+
+    <!-- PROFILE CONTENT -->
+    <main class="profile-container">
+
+        <section class="profile-heading">
+
+            <p class="eyebrow">MEMBER DATABASE // PERSONAL ACCESS</p>
+
+            <h1>Your little <span>corner.</span></h1>
+
+            <p>
+                Your account, your creations, your space.
+            </p>
+
+        </section>
+
+
+        <!-- PROFILE CARD -->
+        <section class="profile-card">
+
+            <div class="profile-top">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    ✦
+                </div>
+
+                <div class="profile-identity">
+
+                    <p class="profile-label">CURRENT MEMBER</p>
+
+                    <h2 id="profileNickname">Loading...</h2>
+
+                    <span class="member-status">
+                        <span class="status-dot"></span>
+                        Account active
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-divider"></div>
+
+
+            <!-- ACCOUNT DETAILS -->
+            <div class="account-details">
+
+                <div class="detail-item">
+
+                    <div class="detail-icon">✧</div>
+
+                    <div>
+                        <p class="detail-label">NICKNAME</p>
+                        <p class="detail-value" id="nicknameValue">
+                            Loading...
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <div class="detail-icon">✉</div>
+
+                    <div>
+                        <p class="detail-label">EMAIL ADDRESS</p>
+                        <p class="detail-value" id="emailValue">
+                            Loading...
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <div class="detail-icon">◈</div>
+
+                    <div>
+                        <p class="detail-label">ACCOUNT STATUS</p>
+                        <p class="detail-value">Signed in</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p id="profileMessage" class="profile-message"
+               role="status" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- ACCOUNT ACTIONS -->
+        <section class="account-actions">
+
+            <p class="eyebrow">ACCOUNT MANAGEMENT</p>
+
+            <h2>Manage your account.</h2>
+
+
+            <button type="button" id="signOutButton"
+                    class="action-button signout-button">
+
+                <span>↗</span>
+
+                <span>
+                    <strong>Sign out</strong>
+                    <small>Leave your account on this device.</small>
+                </span>
+
+            </button>
+
+
+            <button type="button" id="deleteAccountButton"
+                    class="action-button delete-button">
+
+                <span>⌫</span>
+
+                <span>
+                    <strong>Delete account</strong>
+                    <small>Permanently request removal of your account.</small>
+                </span>
+
+            </button>
+
+            <p class="delete-warning">
+                Account deletion is permanent. Your projects and
+                account information may also be removed.
+            </p>
+
+        </section>
+
+
+        <a href="index.html" class="back-link">
+            ← Back to homepage
+        </a>
+
+    </main>
+
+
+    <footer>
+        <p>✳ YOUR CLUB NAME · Creating beyond limits.</p>
+    </footer>
+
+
+    <script type="module" src="js/pfp.js"></script>
+
+</body>
+</html>

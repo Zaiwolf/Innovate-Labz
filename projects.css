@@ -1,0 +1,369 @@
+
+/* =================================
+   PROJECTS PAGE
+================================= */
+
+.projects-page {
+    min-height: 100vh;
+    background: #101522;
+    color: #F3F4F8;
+    overflow-x: hidden;
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.projects-main {
+    width: 90%;
+    max-width: 1450px;
+    margin: auto;
+    padding: 65px 0;
+}
+
+/* =================================
+   PROJECTS HERO
+================================= */
+
+.projects-hero {
+    padding: 65px 0 85px;
+    max-width: 750px;
+    animation: fadeUp 0.8s ease;
+}
+
+.projects-hero h1 {
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1.05;
+    margin: 20px 0;
+    letter-spacing: -3px;
+}
+
+.projects-hero h1 span {
+    color: #B8A7E8;
+}
+
+.projects-hero > p:last-child {
+    color: #AEB2C7;
+    max-width: 520px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* =================================
+   EYEBROW TEXT
+================================= */
+
+.eyebrow {
+    color: #75D6C4;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* =================================
+   PROJECTS HEADING
+================================= */
+
+.projects-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.projects-heading h2 {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.projects-heading h2 span {
+    color: #75D6C4;
+}
+
+/* =================================
+   CREATE POST BUTTON
+================================= */
+
+.create-post-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 21px;
+
+    background: #75D6C4;
+    color: #101522;
+
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+
+    border-radius: 45% 55% 60% 40% / 50% 40% 60% 50%;
+
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.create-post-btn span {
+    font-size: 21px;
+}
+
+.create-post-btn:hover {
+    transform: rotate(-3deg) scale(1.07);
+
+    border-radius: 60% 40% 45% 55% / 40% 55% 45% 60%;
+
+    box-shadow: 0 0 25px rgba(117, 214, 196, 0.3);
+}
+
+/* =================================
+   SEARCH AND FILTERS
+================================= */
+
+.project-tools {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.project-tools input,
+.project-tools select {
+    background: #202A3B;
+    color: #F3F4F8;
+
+    border: 1px solid rgba(184, 167, 232, 0.25);
+    border-radius: 14px;
+
+    padding: 13px 17px;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.project-tools input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.project-tools input::placeholder {
+    color: #9299AD;
+}
+
+.project-tools input:focus,
+.project-tools select:focus {
+    border-color: #75D6C4;
+    box-shadow: 0 0 15px rgba(117, 214, 196, 0.12);
+}
+
+.project-tools select {
+    cursor: pointer;
+}
+
+.project-tools select option {
+    background: #202A3B;
+    color: #F3F4F8;
+}
+
+/* =================================
+   PROJECT GALLERY
+================================= */
+
+.project-gallery {
+    columns: 3 260px;
+    column-gap: 22px;
+}
+
+/* =================================
+   PROJECT CARDS
+================================= */
+
+.project-card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 22px;
+    padding: 16px;
+
+    background: #202A3B;
+
+    border: 1px solid rgba(184, 167, 232, 0.15);
+    border-radius: 22px;
+
+    break-inside: avoid;
+
+    transition: 0.3s ease;
+    animation: fadeUp 0.5s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #75D6C4;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+
+    border-radius: 15px;
+    margin-bottom: 15px;
+
+    object-fit: cover;
+    max-height: 350px;
+}
+
+.project-card h3 {
+    color: #B8A7E8;
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+.project-card p {
+    color: #AEB2C7;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.project-card span {
+    display: inline-block;
+
+    color: #75D6C4;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+/* =================================
+   EMPTY / NO RESULTS MESSAGE
+================================= */
+
+.project-gallery:empty::after {
+    content: "✳  The archive is waiting for its first creations.";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 280px;
+    padding: 35px;
+
+    color: #B8A7E8;
+    text-align: center;
+
+    background: rgba(32, 42, 59, 0.55);
+    border: 1px dashed rgba(184, 167, 232, 0.3);
+    border-radius: 30px;
+}
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 850px) {
+
+    .projects-main {
+        width: 92%;
+    }
+
+    .project-gallery {
+        columns: 2 220px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .projects-main {
+        padding-top: 35px;
+    }
+
+    .projects-hero {
+        padding: 40px 0 55px;
+    }
+
+    .projects-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .projects-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .project-gallery {
+        columns: 1;
+    }
+
+    .project-tools {
+        flex-direction: column;
+    }
+
+    .project-tools input,
+    .project-tools select {
+        width: 100%;
+    }
+
+}
+
+
+.project-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.reaction-button {
+    border: 1px solid rgba(184, 167, 232, 0.25);
+    background: #101522;
+    color: #F3F4F8;
+    border-radius: 20px;
+    padding: 7px 11px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.reaction-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    border-color: #B8A7E8;
+}
+
+.reaction-button.active {
+    background: #292443;
+    border-color: #B8A7E8;
+    box-shadow: 0 0 10px rgba(184, 167, 232, 0.2);
+}
+
+.reaction-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+
+.project-creator {
+    color: #B8A7E8;
+    font-size: 13px;
+    margin: 8px 0;
+    font-weight: 600;
+}
+

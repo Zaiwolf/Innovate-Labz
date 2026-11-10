@@ -1,0 +1,399 @@
+
+/* =================================
+   CREATE PROJECT PAGE
+================================= */
+
+.create-project-page {
+    min-height: 100vh;
+    background: #101522;
+    color: #F3F4F8;
+    overflow-x: hidden;
+}
+
+/* =================================
+   MAIN LAYOUT
+================================= */
+
+.create-main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 0 100px;
+}
+
+/* =================================
+   HERO
+================================= */
+
+.create-hero {
+    max-width: 700px;
+    margin-bottom: 45px;
+    animation: fadeUp 0.7s ease;
+}
+
+.create-hero h1 {
+    font-size: clamp(45px, 7vw, 75px);
+    letter-spacing: -3px;
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.create-hero h1 span {
+    color: #B8A7E8;
+}
+
+.create-hero > p:last-child {
+    color: #AEB2C7;
+    line-height: 1.8;
+}
+
+/* =================================
+   EYEBROW
+================================= */
+
+.create-project-page .eyebrow {
+    color: #75D6C4;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* =================================
+   FORM CARD
+================================= */
+
+.create-card {
+    max-width: 750px;
+    padding: 38px;
+
+    background: rgba(32, 42, 59, 0.75);
+    border: 1px solid rgba(184, 167, 232, 0.2);
+    border-radius: 28px;
+
+    backdrop-filter: blur(15px);
+    animation: fadeUp 0.9s ease;
+}
+
+.form-heading {
+    margin-bottom: 35px;
+}
+
+.form-heading h2 {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.form-heading h2 span {
+    color: #75D6C4;
+}
+
+.form-heading > p:last-child {
+    color: #AEB2C7;
+    font-size: 14px;
+}
+
+/* =================================
+   FORM GROUPS
+================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.form-group > label:first-child {
+    color: #F3F4F8;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input:not([type="file"]),
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px 17px;
+
+    background: #101522;
+    color: #F3F4F8;
+
+    border: 1px solid rgba(184, 167, 232, 0.2);
+    border-radius: 13px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #75D6C4;
+    box-shadow: 0 0 15px rgba(117, 214, 196, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #777F95;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #202A3B;
+    color: #F3F4F8;
+}
+
+.form-group small {
+    color: #9299AD;
+    font-size: 12px;
+}
+
+/* =================================
+   IMAGE UPLOAD
+================================= */
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 190px;
+    padding: 25px;
+
+    background: rgba(16, 21, 34, 0.8);
+    border: 2px dashed rgba(184, 167, 232, 0.35);
+    border-radius: 20px;
+
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #75D6C4;
+    background: rgba(117, 214, 196, 0.05);
+}
+
+.upload-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background: rgba(117, 214, 196, 0.12);
+    color: #75D6C4;
+
+    border-radius: 50%;
+    font-size: 27px;
+}
+
+.upload-area strong {
+    color: #B8A7E8;
+    font-size: 15px;
+}
+
+.upload-area > span:last-child {
+    color: #9299AD;
+    font-size: 12px;
+}
+
+.upload-area input {
+    display: none;
+}
+
+/* =================================
+   IMAGE PREVIEW
+================================= */
+
+.image-preview {
+    display: none;
+    margin-top: 15px;
+}
+
+.image-preview.show {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.image-preview img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+
+    background: #101522;
+    border-radius: 15px;
+}
+
+.image-preview button {
+    align-self: flex-start;
+
+    padding: 9px 14px;
+    background: transparent;
+
+    color: #F2A6A0;
+    border: 1px solid #F2A6A0;
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.image-preview button:hover {
+    background: rgba(242, 166, 160, 0.1);
+}
+
+/* =================================
+   MESSAGE
+================================= */
+
+#projectMessage {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#projectMessage:empty {
+    display: none;
+}
+
+/* =================================
+   PUBLISH BUTTON
+================================= */
+
+.publish-btn {
+    width: 100%;
+    padding: 16px;
+
+    background: #75D6C4;
+    color: #101522;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.publish-btn span {
+    margin-left: 8px;
+}
+
+.publish-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(117, 214, 196, 0.2);
+}
+
+.publish-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =================================
+   CANCEL LINK
+================================= */
+
+.cancel-link {
+    display: block;
+    margin-top: 20px;
+
+    color: #AEB2C7;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.cancel-link:hover {
+    color: #75D6C4;
+}
+
+/* =================================
+   ANIMATION
+================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 650px) {
+
+    .create-main {
+        width: 92%;
+        padding-top: 35px;
+    }
+
+    .create-card {
+        padding: 23px;
+    }
+
+    .create-hero h1 {
+        letter-spacing: -2px;
+    }
+
+}
+
+
+.video-preview {
+    display: none;
+    margin-top: 18px;
+    padding: 15px;
+    background: #202A3B;
+    border: 1px solid rgba(184, 167, 232, 0.2);
+    border-radius: 16px;
+}
+
+.video-preview.show {
+    display: block;
+}
+
+.video-preview video {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    border-radius: 12px;
+    background: #090b18;
+}
+
+.video-preview button {
+    margin-top: 12px;
+    padding: 9px 14px;
+    border: 1px solid #F2A6A0;
+    border-radius: 20px;
+    background: transparent;
+    color: #F2A6A0;
+    cursor: pointer;
+}
+

@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create a Project | Innovate Labs</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="crproj.css">
+</head>
+
+<body class="create-project-page">
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+
+        <a href="index.html" class="nav-logo">
+            ✳ YOUR CLUB NAME
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html"><span>⌂</span> Home</a>
+            <a href="projects.html"><span>✧</span> Projects</a>
+            <a href="index.html#members"><span>♧</span> Members</a>
+            <a href="index.html#about"><span>◎</span> About</a>
+        </div>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Log In ↗</a>
+            <a href="sign_up.html" class="signup-btn">Join Us ✦</a>
+            <a href="pfp.html" class="profile-button">My Profile</a>
+        </div>
+
+    </nav>
+
+    <main class="create-main">
+
+        <!-- HEADING -->
+        <section class="create-hero">
+
+            <p class="eyebrow">CREATOR STUDIO // 002</p>
+
+            <h1>
+                Share your
+                <span>creation.</span>
+            </h1>
+
+            <p>
+                Every great idea starts somewhere.
+                Show the community what you've been working on.
+            </p>
+
+        </section>
+
+        <!-- SUBMISSION FORM -->
+        <section class="create-card">
+
+            <div class="form-heading">
+                <p class="eyebrow">NEW PROJECT ENTRY</p>
+                <h2>Project Details <span>✦</span></h2>
+                <p>Tell us a little about your creation.</p>
+            </div>
+
+            <form id="projectForm">
+
+                <!-- PROJECT TITLE -->
+                <div class="form-group">
+
+                    <label for="projectTitle">Project Title *</label>
+
+                    <input
+                        type="text"
+                        id="projectTitle"
+                        name="title"
+                        placeholder="Give your project a name..."
+                        maxlength="80"
+                        required
+                    >
+
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class="form-group">
+
+                    <label for="projectDescription">Description *</label>
+
+                    <textarea
+                        id="projectDescription"
+                        name="description"
+                        placeholder="What does your project do? Tell us about it..."
+                        maxlength="1000"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                </div>
+
+                <!-- CATEGORY -->
+                <div class="form-group">
+
+                    <label for="projectCategory">Category *</label>
+
+                    <select
+                        id="projectCategory"
+                        name="category"
+                        required
+                    >
+                        <option value="" disabled selected>
+                            Choose a category
+                        </option>
+
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="HTML + CSS + JS">
+                            HTML + CSS + JS
+                        </option>
+                        <option value="Robotics">Robotics</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                </div>
+
+                <!-- PROJECT IMAGE -->
+                <div class="form-group">
+
+                    <label for="projectImage">Project Cover Image</label>
+
+                    <label for="projectImage" class="upload-area">
+
+                        <span class="upload-icon">＋</span>
+
+                        <strong>Upload your project image</strong>
+
+                        <span>PNG, JPG or WEBP · Maximum 5 MB</span>
+
+                        <input
+                            type="file"
+                            id="projectImage"
+                            accept="image/png,image/jpeg,image/webp"
+                        >
+
+                    </label>
+
+                    <!-- IMAGE PREVIEW -->
+                    <div class="image-preview" id="imagePreview">
+
+                        <img
+                            id="previewImage"
+                            alt="Project image preview"
+                        >
+
+                        <button type="button" id="removeImage">
+                            Remove image ✕
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- PROJECT VIDEO -->
+                <div class="form-group">
+
+                    <label for="projectVideo">
+                        Project Video (Optional)
+                    </label>
+
+                    <label for="projectVideo" class="upload-area">
+
+                        <span class="upload-icon">▶</span>
+
+                        <strong>Upload a project demonstration</strong>
+
+                        <span>MP4 or WebM · Maximum 25 MB</span>
+
+                        <input
+                            type="file"
+                            id="projectVideo"
+                            accept="video/mp4,video/webm"
+                        >
+
+                    </label>
+
+                    <!-- VIDEO PREVIEW -->
+                    <div class="video-preview" id="videoPreview">
+
+                        <video
+                            id="previewVideo"
+                            controls
+                            playsinline
+                        ></video>
+
+                        <button type="button" id="removeVideo">
+                            Remove video ✕
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- PROJECT LINK -->
+                <div class="form-group">
+
+                    <label for="projectUrl">Project Link</label>
+
+                    <input
+                        type="url"
+                        id="projectUrl"
+                        name="projectUrl"
+                        placeholder="https://your-project-link.com"
+                    >
+
+                    <small>
+                        Optional. Add a link where people can explore your project.
+                    </small>
+
+                </div>
+
+                <!-- SUBMISSION MESSAGE -->
+                <p
+                    id="projectMessage"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+                <!-- PUBLISH BUTTON -->
+                <button
+                    type="submit"
+                    class="publish-btn"
+                    id="publishButton"
+                >
+                    Publish Project <span>↗</span>
+                </button>
+
+                <a href="projects.html" class="cancel-link">
+                    Cancel and return to projects
+                </a>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="js/crproj.js"></script>
+
+</body>
+</html>

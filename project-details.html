@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | YOUR CLUB NAME</title>
+    <link rel="stylesheet" href="project-details.css">
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">✳ YOUR CLUB NAME</a>
+        <div class="nav-links">
+            <a href="index.html">⌂ Home</a>
+            <a href="projects.html">✧ Projects</a>
+            <a href="pfp.html">My Profile</a>
+        </div>
+    </nav>
+
+    <main class="details-container">
+
+        <a href="projects.html" class="back-link">← Back to projects</a>
+
+        <section id="projectDetails">
+            <p>Loading project...</p>
+        </section>
+
+        <section class="comments-section">
+            <h2>Community thoughts ✦</h2>
+            <p class="comments-intro">
+                Share ideas, ask questions and encourage the creator!
+            </p>
+
+            <form id="commentForm">
+                <textarea
+                    id="commentInput"
+                    placeholder="Write a comment..."
+                    maxlength="1000"
+                    required
+                ></textarea>
+
+                <button type="submit" id="commentButton">
+                    Post Comment ✦
+                </button>
+
+                <p id="commentMessage"></p>
+            </form>
+
+            <div id="commentsList">
+                <p>Loading comments...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/project-details.js"></script>
+
+</body>
+</html>

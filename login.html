@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | YOUR CLUB NAME</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body class="login-page">
+
+    <a href="index.html" class="back-home">← Back to home</a>
+
+    <div class="login-blob login-blob-one"></div>
+    <div class="login-blob login-blob-two"></div>
+    <div class="login-blob login-blob-three"></div>
+
+    <main class="login-card">
+
+        <div class="login-symbol">⌘</div>
+
+        <p class="login-tag">MEMBER ACCESS // 002</p>
+
+        <h1>Welcome <span>back.</span></h1>
+
+        <p class="login-description">
+            Your creative corner missed you.
+            Sign in and let's get building.
+        </p>
+
+        <form id="loginForm">
+
+            <label for="email">Email address</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Your password"
+                required
+            >
+
+            <button type="submit" class="login-submit">
+                ACCESS ACCOUNT <span>↗</span>
+            </button>
+
+            <p id="loginMessage"></p>
+
+        </form>
+
+        <p class="login-footer">
+            New around here?
+            <a href="sign_up.html">Join the club</a>
+        </p>
+
+    </main>
+
+    <script type="module" src="js/login.js"></script>
+
+</body>
+</html>
